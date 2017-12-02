@@ -56,5 +56,5 @@ def rhymes(text):
 
 
 if __name__ == "__main__":
-    res = rhyme(sys.argv[1] if len(sys.argv) >= 2 else "")
+    res = rhymes(sys.argv[1] if len(sys.argv) >= 2 else "")
     print(res)
