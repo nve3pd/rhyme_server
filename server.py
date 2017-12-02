@@ -17,7 +17,7 @@ def index():
 @app.route("/rhyme/<text>")
 def rhyme_words(text):
     """ jsonで韻を踏んでいそうな単語を返してくれる """
-    words = {0: [i for i in rhymes(text)]}
+    words = {"text": [i for i in rhymes(text)]}
 
     return jsonify(words)
 
