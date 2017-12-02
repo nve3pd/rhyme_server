@@ -39,13 +39,12 @@ class Mor_analysis:
     def divide_attribute(self, attr_list, target):
         """ 同じ属性(品詞)を持つものに分ける """
         res = []
+        s = " ".join(attr_list)
 
-        for i in attr_list:
-            tokens = self.t.tokenize(i)
-            for j in tokens:
-                if target == j.part_of_speech.split(",")[0]:
-                    # print(target, j.part_of_speech)
-                    res.append(i)
+        tokens = self.t.tokenize(s)
+        for j in tokens:
+            if target == j.part_of_speech.split(",")[0]:
+                res.append(j.base_form)
         return res
 
     def make_text(self):
