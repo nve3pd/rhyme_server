@@ -1,2 +1,4 @@
-# rhyme_server
-韻を踏んでいる単語を返してくれるかもしれないweb api
+# tuRhyme
+```
+https://turhyme.herokuapp.com/rhyme/
+```
