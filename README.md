@@ -1,4 +1,4 @@
 # tuRhyme
 ```
-https://turhyme.herokuapp.com/rhyme/
+https://turhyme.herokuapp.com/rhyme/<text>
 ```
