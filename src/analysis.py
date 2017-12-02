@@ -59,14 +59,17 @@ class Mor_analysis:
                 f = True
                 self.tokens[j] = random.choice(words)  # ランダムで選んで入れる
 
-        res = "".join(self.tokens)
-        if not f:
+        try:
+            res = "".join(self.tokens)
+            if not f:
+                return ""
+            elif res == self.text:
+                return ""
+            else:
+                print(self.tokens)
+                return res
+        except TypeError:
             return ""
-        elif res == self.text:
-            return ""
-        else:
-            print(self.tokens)
-            return res
 
 
 if __name__ == "__main__":
