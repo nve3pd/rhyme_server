@@ -1,9 +1,8 @@
-import json
 import sys
 from flask import Flask, jsonify
 sys.path.append("./src/")
 
-from rhyme import rhymes
+from analysis import Mor_analysis
 
 app = Flask(__name__)
 
@@ -17,7 +16,11 @@ def index():
 @app.route("/rhyme/<text>")
 def rhyme_words(text):
     """ jsonで韻を踏んでいそうな単語を返してくれる """
-    words = {"text": [i for i in rhymes(text)]}
+    mor = Mor_analysis(text)
+
+    words = {"text": mor.make_text()}
+    if words["text"] == "":
+        words = {"text": None}
 
     return jsonify(words)
 
