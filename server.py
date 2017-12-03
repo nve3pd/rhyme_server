@@ -19,6 +19,7 @@ def rhyme_words(text):
     mor = Mor_analysis(text)
 
     words = {"text": mor.make_text()}
+    del mor
     if words["text"] == "":
         words = {"text": None}
 
