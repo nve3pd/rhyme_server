@@ -1,6 +1,6 @@
 import sys
 from flask import Flask, jsonify
-sys.path.append("./src/")
+sys.path.append("server/src/")
 
 from analysis import Mor_analysis
 
