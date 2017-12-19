@@ -13,3 +13,4 @@ git+https://github.com/miurahr/pykakasi
 requests==2.18.1
 urllib3==1.21.1
 Werkzeug==0.12.2
+janome==0.3.5
