@@ -17,12 +17,12 @@ def index():
 def rhyme_words(text):
     """ jsonで韻を踏んでいそうな単語を返してくれる """
     mor = Mor_analysis(text)
-    print(mor)
 
     words = {"text": mor.make_text()}
     del mor
     if words["text"] == "":
         words = {"text": None}
+    print(words)
 
     return jsonify(words)
 
